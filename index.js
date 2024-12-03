@@ -1,5 +1,8 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
+
+audio.Map.play()
+
 const image = new Image();
 image.src = "./images/little-town.png";
 const playerDownImage = new Image();
@@ -439,3 +442,13 @@ window.addEventListener('keyup', (e) => {
             break;
     }
 })
+
+
+let clicked = false
+addEventListener('click', () => {
+    if(!clicked){
+        audio.Map.play()
+        clicked = true
+    }
+})
+    
